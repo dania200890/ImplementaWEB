@@ -25,12 +25,12 @@ class AuthManager {
         }
         
         // Validar formato de usuario (email)
-        if (!filter_var($usuario, FILTER_VALIDATE_EMAIL)) {
-            return [
-                'success' => false,
-                'message' => 'Formato de usuario inválido'
-            ];
-        }
+        // if (!filter_var($usuario, FILTER_VALIDATE_EMAIL)) {
+        //     return [
+        //         'success' => false,
+        //         'message' => 'Formato de usuario inválido'
+        //     ];
+        // }
         
         // Intentar login con la API
         $apiResponse = $this->apiClient->login($usuario, $password);
