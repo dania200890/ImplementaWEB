@@ -12,7 +12,7 @@ $showSensitiveData = false;
 // Procesar logout
 if (isset($_GET['logout'])) {
     session_destroy();
-    header('Location: vulnerable_login.php');
+    header('Location: index.php');
     exit;
 }
 
